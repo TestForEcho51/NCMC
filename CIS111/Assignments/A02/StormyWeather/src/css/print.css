@@ -1,0 +1,169 @@
+
+
+
+
+@media all {
+    .background{
+        position: absolute;
+        width: 50%;
+
+    }
+
+
+    body{
+
+        padding: 1px;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+        height: auto;
+
+    }
+
+
+
+    .device_Banner{
+        display: none;
+
+        text-align: left;
+
+        min-height: 10%;
+        max-height: 15%;
+        height: auto;
+        min-width: 100vw;
+        max-width: 100vw;
+
+        position: fixed;
+
+    }
+    .storyWeather{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 3%;
+        font-size: 25px;
+
+
+    }
+    .container{
+
+        color: white;
+        background-color: #2524249E;
+        font-family: Oxygen, sans-serif;
+
+    }
+    img.background{
+
+        min-width: 50%;
+        min-height: 50vh;
+        position: inherit;
+
+
+        background-size: cover;
+        align-content: center;
+        text-align: center;
+        z-index: -1;
+
+    }
+    .mainContent{
+
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+
+        text-align: center;
+        align-content: center;
+        z-index: -1;
+    }
+
+    .verse{
+
+        display: none;
+        position: relative;
+        width: 28%;
+        max-width: 30%;
+        min-width: 20%;
+        left: 4%;
+        height: 48%;
+        top: 20%;
+        font-size: 1.5vmax;
+        vertical-align: middle;
+        padding: 1.5vmin;
+        border-width: .3em;
+        border-color: white;
+        border-style: double;
+
+
+    }
+    .p{
+
+        padding: 10em;
+    }
+    .name{
+        position: relative;
+        float: left;
+        width: 50%;
+        vertical-align: center;
+        font-family: Oxygen, sans-serif;
+        opacity: 1;
+        text-align: center;
+        font-size: 50px;
+
+
+    }
+    .icon_tray{
+        display: none;
+        float: right;
+        margin: 0;
+        padding: 1%;
+        right: 0px;
+        width: 25%;
+        vertical-align: middle;
+        z-index: 1;
+
+
+    }
+
+    img.icon:hover{
+        opacity: 1;
+
+
+        transform: rotateY(360deg);
+    }
+    .icon{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 10in){
+    /* pc */
+    .icon.pc{
+        opacity: 1;
+    }
+}
+
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 8in) {
+    /* mobile */
+    .icon.mobile{
+        opacity: 1;
+    }
+    .icon.tablet{
+        opacity: 1;
+    }
+
+
+}
+
+
+

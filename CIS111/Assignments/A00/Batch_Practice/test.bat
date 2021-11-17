@@ -1,0 +1,1 @@
+test/blue/cyan/COLOR.bat

@@ -1,0 +1,30 @@
+@media print {
+
+    body {
+        background-color: #FFFFFF;
+        height: auto;
+        margin: 0;
+        text-align: center;
+    }
+
+    html{
+        margin: 1cm;
+
+    }
+    .row{
+        border: unset;
+        display: grid;
+    }
+    .turn90{
+        writing-mode: unset;
+        text-orientation: unset;
+        transform: unset;
+    }
+    #date{
+        bottom: 0;
+    }
+    :root{
+        --max-height: 100%;
+        --max-width: 100%;
+    }
+}

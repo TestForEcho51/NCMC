@@ -1,0 +1,209 @@
+:root{
+--titleFont1: 9vw;
+--titleFont2: 11vw;
+--titleFont3: 12vw;
+
+
+}
+
+html{
+    min-width: 100vw;
+    display: block;
+}
+
+body{
+
+
+    font-weight: 125;
+}
+.content{
+
+    font-family: Helvetica, sans-serif;
+    padding-left: 2vw;
+    max-width: 98vw;
+
+    padding-right: 2vw;
+}
+
+.title_container{
+    margin-top: 1em;
+    display: inline-flex;
+
+}
+h1 {
+    font-family: Adobe Garamond Pro, sans-serif;
+
+}
+.title_object{
+    display: inline-block;
+
+}
+.title_container.image_container{
+    min-width: 20vw;
+    width: auto;
+    height: auto;
+    max-width: 20%;
+}
+#brad{
+    right: 0;
+    text-align: right;
+}
+#angelina{
+    left: 0;
+}
+
+.image_container{
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.title{
+    text-align: center;
+    max-width: 40vw;
+    width: fit-content;
+    vertical-align: center;
+    margin-top: 4.5vw;
+}
+#mr{
+    width: 100%;
+    text-align:left;
+    padding-left: .1vw;
+}
+#amp{
+
+    text-align: center;
+    margin-right: 0;
+    color: #c41414;
+
+}
+#mrs{
+    width: 40%;
+    right: 0;
+    text-align: left;
+    margin-left: 0;
+
+}
+#smith{
+    width: 100%;
+
+
+    text-align:left;
+    padding-left: .1vw;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.top{
+    vertical-align: top;
+    font-size: .75em;
+}
+
+
+
+
+.rating_container{
+    display: inline-flex;
+    text-align: left;
+    font-size: 2rem;
+
+}
+.rating{
+
+}
+.star{
+
+    position: relative;
+    height: auto;
+    background-color: black;
+    vertical-align: center;
+    width: 2rem;
+
+    margin: 0 .25em 0 .25em;
+    color: transparent;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
+@media only screen  and (min-width: 6in){
+
+    .root{
+        --titleFont1: 8vw;
+        --titleFont2: 8vw;
+        --titleFont3: 8vw;
+    }
+    .title_container{
+    display: inline-block;
+        margin-left: 22vw;
+        margin-right: 22vw;
+
+    }
+    .title{
+        display: flex;
+        width: unset;
+        text-align: center;
+        font-size: 7vw;
+    }
+    .title_object{
+        width: auto;
+        margin: 0 2vw 0 2vw;
+
+    }
+    #mr{
+        text-align: unset;
+
+        left: unset;
+        font-size: unset;
+        width: unset;
+
+    }
+    #amp{
+        margin: unset;
+        font-size: unset;
+        width: unset;
+        text-align: unset;
+
+    }
+    #mrs{
+        margin: unset;
+        font-size: unset;
+        width: unset;
+        text-align: unset;
+    }
+    #smith{
+        margin: unset;
+        font-size: unset;
+        width: unset;
+
+    }
+    .image_container{
+        margin: unset;
+    }
+    #brad{
+        position: fixed;
+        max-width: 25vw;
+        top: 5vh;
+    }
+
+    #angelina{
+        position: fixed;
+        z-index: -1;
+        max-width: 25vw;
+        top: 5vh;
+    }
+    body{
+        background-color: transparent;
+        display: block;
+
+        horiz-align: center;
+
+    }
+    .content{
+        max-width: 50vw;
+        margin-left: 22vw;
+        margin-right: 22vw;
+    }
+}
+
+

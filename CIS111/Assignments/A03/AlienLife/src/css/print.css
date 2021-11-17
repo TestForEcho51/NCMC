@@ -1,0 +1,31 @@
+@media print {
+
+    body{
+    background-color: #FFFFFF;
+    }
+    .pText{
+
+    }
+    .topImage {
+        position: static;
+        page-break-after: auto;
+        padding: 30px;
+        margin: 0 0 2cm 0;
+    }
+    .title_container{
+        margin: 2cm;
+        padding: 2cm;
+    }
+.section{
+    page-break-inside: avoid;
+    width: 100%;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+    #survey{
+        display: none;
+    }
+    .pullQuote{
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,28 @@
+SELECT language 'LANGUAGES FOUND ON OVER 1000 WEBSITES'
+FROM Occurs o
+LEFT OUTER JOIN Dictionary d 
+ON o.word = d.word 
+GROUP BY d.language
+HAVING COUNT (DISTINCT o.url) >=1000; 
+
+
+SELECT URL 'WEBSITE', MAX(C) 'MOST WORDS FROM SAME LANGUAGE' FROM (SELECT COUNT() C, URL FROM 
+DICTIONARY D 
+INNER JOIN OCCURS O 
+ON O.WORD = D.WORD 
+GROUP BY LANGUAGE, URL)
+GROUP BY URL
+
+WITH wordCtCTE AS
+(
+SELECT
+ URL,
+ COUNT(DISTINCT o.word) as occs 
+ FROM Occurs o
+ GROUP BY url
+
+)
+SELECT o.url, d.language FROM Occurs o INNER JOIN Dictionary d on d.word = o.word 
+INNER JOIN wordCtCTE cte on cte.url = o.url
+GROUP BY o.url, d.language
+HAVING COUNT(*) = cte.occs

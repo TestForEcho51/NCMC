@@ -1,0 +1,257 @@
+
+:root{
+    --main-color: rgba(206, 206, 206, 0.99);
+    --header-color: rgba(255, 255, 255, 0.98);
+    --border-color: #eaeaea;
+    --font-size: 1.2em;
+}
+body{
+    background-color: #000000FF;
+    color: var(--main-color); /*change to hex*/
+    min-width: 100vw;
+    max-width: 95vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "MuseoSans_500", SansSerif, serif;
+
+
+}
+
+
+.section{
+    display: block;
+
+    max-width: 85%;
+    margin: 5em auto;
+    font-size: var(--font-size);
+}
+
+.pText{
+    text-align: justify-all;
+    display: block;
+
+
+    padding: .4em;
+    text-indent: 0;
+    margin-left: 2em;
+
+}
+header{
+    font-size: 1.6em;
+    color: var(--header-color);
+    margin-left: 0;
+}
+/* Title Config */
+.title_container
+{
+    margin-top: 10vh;
+    text-align: center;
+    width: 100%;
+
+
+}
+.title_main{
+font-size: 4em;
+    margin: 0 auto;
+}
+.title_small{
+    font-size: 1.8em;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 13em;
+}
+.textWrap{
+
+}
+
+
+
+.pullQuote{
+
+    padding: 2.2em 0;
+
+    width: 15%;
+    min-width: 120px;
+    height: auto;
+    border-top: var(--border-color) .3em solid;
+    border-bottom: var(--border-color) .3em solid;
+}
+.pullQuote.top{
+
+}
+.pullQuote.left{
+    float: left;
+    margin: 1em 1em 1em 0;
+}
+.pullQuote.right{
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+.imageContainer{
+width: inherit;
+
+}
+.topImage{
+    min-width: 100vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: scaleY(.40);
+    max-height: 10vh;
+    z-index: -100;
+    margin: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+
+
+}
+.surveyResponse{
+    max-width: 80%;
+    align-items: center;
+    text-align: center;
+
+
+}
+.emailInput{
+    display: flex;
+    align-self: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.hidden{
+    display: none;
+}
+button{
+    margin: 0 auto;
+}
+input{
+    margin: 0 auto;
+}
+img{
+   width: 100%;
+   min-width: inherit;
+    top: inherit;
+}
+input{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2021 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      exljbris Font Foundry
+ * License URL: https://www.fontspring.com/licenses/exljbris/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'MuseoSans_500';
+    src: url('Fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+    url('Fonts/MuseoSans_500-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1080px) {
+    .section {
+        max-width: 1200px;
+    }
+}
+@media only screen and (max-width: 480px){
+   .section{
+       min-width: 90%;
+       font-size: var(--font-size)/2;
+
+}
+}
+
+
+
+
+
+
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2021 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      exljbris Font Foundry
+ * License URL: https://www.fontspring.com/licenses/exljbris/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'MuseoSans_500';
+    src: url('src/WebFonts/Fonts/MuseoSans_500.woff2') format('woff2'),
+    url('src/WebFonts/Fonts/MuseoSans_500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

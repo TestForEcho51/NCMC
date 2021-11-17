@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="QuickDBD-Free Diagram (1).sql" id="Project_1eac" database="MySql" >
+	<schema name="public" >
+		<table name="Addresses" spec="" >
+			<column name="AddressID" type="varchar" jt="12" mandatory="y" />
+			<column name="StreetNumber" type="int" jt="4" mandatory="y" />
+			<column name="StreetName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="CityName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="State" type="enum" jt="12" mandatory="y" />
+			<column name="ZipCode" type="int" length="5" jt="4" mandatory="y" />
+		</table>
+		<table name="Birthdays" spec="" >
+			<column name="DateOfBirth" type="date" jt="91" mandatory="y" />
+			<column name="Age" type="int" jt="4" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="DateOfBirth" />
+			</index>
+		</table>
+		<table name="Family" spec="" >
+			<column name="FamilyID" type="varchar" jt="12" mandatory="y" />
+			<column name="Address" type="varchar" jt="12" mandatory="y" />
+			<column name="Vehicle" type="int" jt="4" mandatory="y" />
+			<column name="Schedule" type="int" jt="4" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="FamilyID" />
+			</index>
+			<fk name="fk_Family_Address" to_schema="public" to_table="Addresses" >
+				<fk_column name="Address" pk="AddressID" />
+			</fk>
+			<fk name="fk_Family_Vehicle" to_schema="public" to_table="Vehicles" >
+				<fk_column name="Vehicle" pk="VehicleID" />
+			</fk>
+			<fk name="fk_Family_Schedule" to_schema="public" to_table="Schedule" >
+				<fk_column name="Schedule" pk="ScheduleID" />
+			</fk>
+		</table>
+		<table name="ParentData" spec="" >
+			<column name="ParentID" type="varchar" jt="12" mandatory="y" />
+			<column name="FirstName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="LastName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Family" type="int" jt="4" mandatory="y" />
+			<column name="DriversLicence" type="varchar" length="20" jt="12" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="ParentID" />
+			</index>
+			<fk name="fk_ParentData_Family" to_schema="public" to_table="Family" >
+				<fk_column name="Family" pk="FamilyID" />
+			</fk>
+		</table>
+		<table name="Salaries" spec="" >
+			<column name="Position" type="varchar" jt="12" mandatory="y" />
+			<column name="Rate" type="numeric" jt="2" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="Position" />
+			</index>
+		</table>
+		<table name="Schedule" spec="" >
+			<column name="ScheduleID" type="int" jt="4" mandatory="y" />
+			<column name="DropOffTime" type="time" jt="92" mandatory="y" />
+			<column name="PickUpTime" type="time" jt="92" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="ScheduleID" />
+			</index>
+		</table>
+		<table name="Staff" spec="" >
+			<column name="Name" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Address" type="varchar" jt="12" mandatory="y" />
+			<column name="DateOfBirth" type="date" jt="91" mandatory="y" />
+			<column name="StudentGroup" type="int" jt="4" mandatory="y" />
+			<column name="Position" type="enum" jt="12" mandatory="y" />
+			<fk name="fk_Staff_Address" to_schema="public" to_table="Addresses" >
+				<fk_column name="Address" pk="AddressID" />
+			</fk>
+			<fk name="fk_Staff_DateOfBirth" to_schema="public" to_table="Birthdays" >
+				<fk_column name="DateOfBirth" pk="DateOfBirth" />
+			</fk>
+			<fk name="fk_Staff_StudentGroup" to_schema="public" to_table="StudentGroup" >
+				<fk_column name="StudentGroup" pk="GroupID" />
+			</fk>
+			<fk name="fk_Staff_Position" to_schema="public" to_table="Salaries" >
+				<fk_column name="Position" pk="Position" />
+			</fk>
+		</table>
+		<table name="StudentData" spec="" >
+			<column name="StudentID" type="varchar" jt="12" mandatory="y" />
+			<column name="FirstName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="LastName" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="DateOfBirth" type="date" jt="91" mandatory="y" />
+			<column name="Allergies" type="varchar" length="255" jt="12" />
+			<column name="SpecialInstructions" type="varchar" length="255" jt="12" />
+			<column name="Family" type="int" jt="4" mandatory="y" />
+			<column name="StudentGroupID" type="int" jt="4" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="StudentID" />
+			</index>
+			<fk name="fk_StudentData_DateOfBirth" to_schema="public" to_table="Birthdays" >
+				<fk_column name="DateOfBirth" pk="DateOfBirth" />
+			</fk>
+			<fk name="fk_StudentData_Family" to_schema="public" to_table="Family" >
+				<fk_column name="Family" pk="FamilyID" />
+			</fk>
+			<fk name="fk_StudentData_StudentGroupID" to_schema="public" to_table="StudentGroup" >
+				<fk_column name="StudentGroupID" pk="GroupID" />
+			</fk>
+		</table>
+		<table name="StudentGroup" spec="" >
+			<column name="GroupID" type="varchar" jt="12" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="GroupID" />
+			</index>
+		</table>
+		<table name="Vehicles" spec="" >
+			<column name="VehicleID" type="int" jt="4" mandatory="y" />
+			<column name="Make" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Model" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Color" type="enum" jt="12" mandatory="y" />
+			<column name="LicencePlate" type="varchar" length="20" jt="12" mandatory="y" />
+			<index name="PrimaryKey" unique="PRIMARY_KEY" >
+				<column name="VehicleID" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Parsed Script Layout" id="Layout_219" show_relation="columns" >
+		<entity schema="public" name="Addresses" color="C7F4BE" x="256" y="352" />
+		<entity schema="public" name="Birthdays" color="C7F4BE" x="48" y="352" />
+		<entity schema="public" name="Family" color="BED3F4" x="1168" y="144" />
+		<entity schema="public" name="ParentData" color="BED3F4" x="1360" y="144" />
+		<entity schema="public" name="Salaries" color="C7F4BE" x="64" y="176" />
+		<entity schema="public" name="Schedule" color="BED3F4" x="1152" y="352" />
+		<entity schema="public" name="Staff" color="C7F4BE" x="256" y="128" />
+		<entity schema="public" name="StudentData" color="C7F4BE" x="768" y="400" />
+		<entity schema="public" name="StudentGroup" color="C7F4BE" x="736" y="128" />
+		<entity schema="public" name="Vehicles" color="BED3F4" x="960" y="128" />
+		<callout x="1168" y="48" pointer="Round" >
+			<comment><![CDATA[Current layout is generated by parsing the SQL script.
+DbSchema is in 'offline' mode (not connected to any database).]]></comment>
+		</callout>
+		<script name="QuickDBD-Free Diagram (1).sql" id="Editor_ba4" language="SQL" >
+			<string><![CDATA[ï»¿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Link to schema: https://app.quickdatabasediagrams.com/#/d/DZrFbA
+-- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+
+-- Modify this code to update the DB schema diagram.
+-- To reset the sample schema, replace everything with
+-- two dots ('..' - without quotes).
+
+CREATE TABLE `StudentData` (
+    `StudentID` AUTO  NOT NULL ,
+    `FirstName` VARCHAR(20)  NOT NULL ,
+    `LastName` VARCHAR(20)  NOT NULL ,
+    `DateOfBirth` DATE  NOT NULL ,
+    `Allergies` VARCHAR(255)  NULL ,
+    `SpecialInstructions` VARCHAR(255)  NULL ,
+    `Family` INT  NOT NULL ,
+    `StudentGroupID` INT  NOT NULL ,
+    PRIMARY KEY (
+        `StudentID`
+    )
+);
+
+CREATE TABLE `ParentData` (
+    `ParentID` AUTO  NOT NULL ,
+    `FirstName` VARCHAR(20)  NOT NULL ,
+    `LastName` VARCHAR(20)  NOT NULL ,
+    `Family` INT  NOT NULL ,
+    `DriversLicence` VARCHAR(20)  NOT NULL ,
+    PRIMARY KEY (
+        `ParentID`
+    )
+);
+
+CREATE TABLE `Staff` (
+    `Name` VARCHAR(20)  NOT NULL ,
+    `Address` NOTNULL  NOT NULL ,
+    `DateOfBirth` DATE  NOT NULL ,
+    `StudentGroup` INT  NOT NULL ,
+    `Position` ENUM  NOT NULL 
+);
+
+CREATE TABLE `Family` (
+    `FamilyID` AUTO  NOT NULL ,
+    `Address` NOTNULL  NOT NULL ,
+    `Vehicle` INT  NOT NULL ,
+    `Schedule` INT  NOT NULL ,
+    PRIMARY KEY (
+        `FamilyID`
+    )
+);
+
+CREATE TABLE `StudentGroup` (
+    `GroupID` AUTO  NOT NULL ,
+    PRIMARY KEY (
+        `GroupID`
+    )
+);
+
+CREATE TABLE `Addresses` (
+    `AddressID` AUTO  NOT NULL ,
+    `StreetNumber` INT  NOT NULL ,
+    `StreetName` VARCHAR(20)  NOT NULL ,
+    `CityName` VARCHAR(20)  NOT NULL ,
+    `State` ENUM  NOT NULL ,
+    `ZipCode` INT(5)  NOT NULL 
+);
+
+CREATE TABLE `Vehicles` (
+    `VehicleID` int  NOT NULL ,
+    `Make` VARCHAR(20)  NOT NULL ,
+    `Model` VARCHAR(20)  NOT NULL ,
+    `Color` ENUM  NOT NULL ,
+    `LicencePlate` VARCHAR(20)  NOT NULL ,
+    PRIMARY KEY (
+        `VehicleID`
+    )
+);
+
+CREATE TABLE `Birthdays` (
+    `DateOfBirth` DATE  NOT NULL ,
+    `Age` INT  NOT NULL ,
+    PRIMARY KEY (
+        `DateOfBirth`
+    )
+);
+
+CREATE TABLE `Schedule` (
+    `ScheduleID` INT  NOT NULL ,
+    `DropOffTime` TIME  NOT NULL ,
+    `PickUpTime` TIME  NOT NULL ,
+    PRIMARY KEY (
+        `ScheduleID`
+    )
+);
+
+CREATE TABLE `Salaries` (
+    `Position` VARCHAR  NOT NULL ,
+    `Rate` NUMERIC  NOT NULL ,
+    PRIMARY KEY (
+        `Position`
+    )
+);
+
+-- Free plan table limit reached. SUBSCRIBE for more.
+
+
+
+ALTER TABLE `StudentData` ADD CONSTRAINT `fk_StudentData_DateOfBirth` FOREIGN KEY(`DateOfBirth`)
+REFERENCES `Birthdays` (`DateOfBirth`);
+
+ALTER TABLE `StudentData` ADD CONSTRAINT `fk_StudentData_Family` FOREIGN KEY(`Family`)
+REFERENCES `Family` (`FamilyID`);
+
+ALTER TABLE `StudentData` ADD CONSTRAINT `fk_StudentData_StudentGroupID` FOREIGN KEY(`StudentGroupID`)
+REFERENCES `StudentGroup` (`GroupID`);
+
+ALTER TABLE `ParentData` ADD CONSTRAINT `fk_ParentData_Family` FOREIGN KEY(`Family`)
+REFERENCES `Family` (`FamilyID`);
+
+ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_Address` FOREIGN KEY(`Address`)
+REFERENCES `Addresses` (`AddressID`);
+
+ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_DateOfBirth` FOREIGN KEY(`DateOfBirth`)
+REFERENCES `Birthdays` (`DateOfBirth`);
+
+ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_StudentGroup` FOREIGN KEY(`StudentGroup`)
+REFERENCES `StudentGroup` (`GroupID`);
+
+ALTER TABLE `Staff` ADD CONSTRAINT `fk_Staff_Position` FOREIGN KEY(`Position`)
+REFERENCES `Salaries` (`Position`);
+
+ALTER TABLE `Family` ADD CONSTRAINT `fk_Family_Address` FOREIGN KEY(`Address`)
+REFERENCES `Addresses` (`AddressID`);
+
+ALTER TABLE `Family` ADD CONSTRAINT `fk_Family_Vehicle` FOREIGN KEY(`Vehicle`)
+REFERENCES `Vehicles` (`VehicleID`);
+
+ALTER TABLE `Family` ADD CONSTRAINT `fk_Family_Schedule` FOREIGN KEY(`Schedule`)
+REFERENCES `Schedule` (`ScheduleID`);
+
+-- Free plan table limit reached. SUBSCRIBE for more.
+
+
+
+-- Free plan table limit reached. SUBSCRIBE for more.
+
+
+]]></string>
+		</script>
+	</layout>
+</project>

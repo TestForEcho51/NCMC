@@ -1,0 +1,40 @@
+INSERT INTO Movie (id, name, year, rating, runtime, genre, earnings_rank)
+VALUES ('4846340', 'Hidden Figures', 2016, 'PG', 127, 'BDH', NULL);
+
+
+INSERT INTO Actor (actor_id, movie_id)
+VALUES ('1847117', '4846340');
+INSERT INTO Actor (actor_id, movie_id)
+VALUES ('0818055', '4846340');
+INSERT INTO Actor (actor_id, movie_id)
+VALUES ('0378245', '4846340');
+
+
+SELECT earnings_rank, rating, runtime 
+FROM Movie 
+WHERE name IS 'Incredibles 2';
+
+
+SELECT name, pob, dob 
+FROM Person 
+WHERE name = 'Lady Gaga' OR name - 'Melissa McCarthy';
+
+
+SELECT name, year 
+FROM Movie 
+WHERE Rating = 'G' AND YEAR >= 2010;
+
+
+SELECT AVG(earnings_rank) 
+FROM Movie 
+WHERE rating = 'G' AND earnings_rank IS NOT NULL;
+
+
+SELECT oscar.year, COUNT(*) from oscar 
+INNER JOIN movie ON movie.id = oscar.movie_id 
+GROUP BY oscar.year 
+HAVING COUNT(*) IS NOT 6;
+
+
+SELECT name, runtime FROM movie WHERE name LIKE '%Star WArs%' ORDER BY runtime LIMIT 1;
+

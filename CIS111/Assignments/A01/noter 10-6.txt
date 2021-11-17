@@ -1,0 +1,26 @@
+notes for CIS 1277 10/06
+
+Authentication, authorization, Accounting
+
+Discretionary Access Control
+Every resource has an owner -- uses ACL 
+
+Mandatory Access Control
+
+Everyone has a level of clearance, everything has a level of security
+
+
+Rule based access control: 
+Used with routers, uses router ACLs, allows or denies, matches are allowed -- all others denied 
+
+Attribute-Based Access: 
+Flexible access control, which combines attributes to determine access... 
+
+Conditional Access  
+
+OAuth, doesn't provide authentication, it provides authorization
+
+Shibboleth -- Web-based 
+
+Kerberos -- Open source, used heavily by windows active directory/linus 
+

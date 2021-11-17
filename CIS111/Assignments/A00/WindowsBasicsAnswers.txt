@@ -1,0 +1,29 @@
+5a :  'Folder2' is no longer visible on the desktop, and is now located in 'Folder1'
+
+7a : The file extension for the text file is '.txt'
+
+8a : I selected the text document and used the keyboard shortcut 'CTRL + C' to copy the file, I then right clicked on 'Folder2' and clicked 'Paste' from the menu to create a copy of the file inside of 'Folder2'
+
+9a : The attributes associated with the file are 'Read-only' and 'Hidden', neither of which are selected. The advanced attributes indicate that the 'File is ready for archiving', and that 'Allow this file to have contents indexed in addition to file properties' is enabled. The compress and encrypt attributes indicate that the file is not being compressed to save space, and the contents are not being encrypted. 
+
+10a : The complete path to the 'Folder3' is C:\Users\vchar\Desktop\Folder1\Folder2\Folder3
+10b : 3D Objects, Desktop, Documents, Downloads, Music, Pictures, Videos
+
+12a : 'Folder1' was added to the list of folders under 'Quick access', this is convenient for folders that are used frequently because it provides a shortcut to said folder, and prevents the user from having to having to navigate to the location directory every time. 
+
+13a : $WinREAgent, Apps, CIS111, CIS127, CIS150, dell, Downloads, Drivers, Intel, OneDriveTemp, PerfLogs, Program Files, Program Files (x86), Program Data, Recovery, Steam, Users, Windows
+
+
+14a : Alli, Default, Public, vchar
+
+15a : Yes, I was able to open it by double clicking it.  It then listed several unorganized files, which led me to tidy them up before proceeding with this assignment. 
+
+16a : When I double clicked 'Alli' it did nothing. So I went to properties and under 'Network file and folder sharing' and shared her folder with myself. I was able to do this as an administrator on my device. It then listed her user directories. (all of which are empty, because I only added her as a user to experiment with file permissions)
+
+17a : Libraries, Public Account Pictures, Public Desktop, Public Documents, Public Downloads, Public Music, Public Pictures, Public Videos
+
+20a : Camera Roll, Documents, Music, Pictures, Saved Pictures, Videos
+
+23a : In the 'Manage Library' window, you can select the library to remove and click 'Remove', or you can right-click the directory and select 'Remove' in the banner.
+
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/CIS150/asn6.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="200"/><column_width id="3" width="1368"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="4" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainDirector"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Actor" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="128"/><column index="2" value="141"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Director" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="87"/><column index="2" value="73"/></column_widths><filter_values><column index="1" value="0000095"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Movie" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="112"/><column index="2" value="300"/><column index="3" value="82"/><column index="4" value="97"/><column index="5" value="123"/><column index="6" value="109"/><column index="7" value="211"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Oscar" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="141"/><column index="2" value="151"/><column index="3" value="300"/><column index="4" value="82"/></column_widths><filter_values><column index="4" value="1994"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Person" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="56"/><column index="2" value="168"/><column index="3" value="73"/><column index="4" value="300"/></column_widths><filter_values><column index="4" value="New York, New York, USA"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="R-Rated Runtimes">SELECT 
+		min(Movie.runtime) 'Short',
+		max(Movie.runtime) 'Long',
+		avg(Movie.runtime) 'Average length'
+		from Movie
+		WHERE rating = 'R';</sql><sql name="Spielberg Oscars">SELECT 
+o.type 'Type of Oscar',
+o.year 'Year',
+m.name 'Movie Name'
+FROM Oscar o
+INNER JOIN person p 
+ON o.person_id = p.id
+JOIN Movie m
+ON o.movie_id = m.id
+
+WHERE p.name = 'Steven Spielberg'
+
+
+</sql><sql name="Common Birthplaces">SELECT 
+pob 'City (EXLUDING BOROUGHS)',
+COUNT() 'Number Of People'
+
+ from Person p 
+ WHERE p.pob IS NOT NULL
+ GROUP BY p.pob
+ HAVING count() &gt;=50;
+ 
+
+</sql><sql name="Movies Without Oscars">SELECT count() 'Number Of Movies Without Oscars'
+FROM Movie as m
+WHERE m.id NOT IN (SELECT movie_id FROM Oscar)
+
+
+
+
+</sql><sql name="R-Rated Directors">
+SELECT  *
+FROM Movie m 
+INNER JOIN Director d
+ON m.id = d.movie_id
+WHERE m.rating = 'R'
+GROUP BY d.director_id
+
+
+</sql><sql name="R-Rated Directors (1)">SELECT COUNT() 'Number of R-Rated Film Directors' FROM
+(
+SELECT  DISTINCT d.director_id FROM  
+
+movie m
+INNER JOIN director d 
+ON m.id =  d.movie_id
+
+WHERE m.rating = 'R' 
+)
+
+
+</sql><sql name="Update Rating For INDIANA JONES"></sql><sql name="ACTORS FROM SWEDEN">SELECT
+	DISTINCT p.name	'Name',
+	COUNT(a.movie_id) 'Number of Movies Acted'
+	
+FROM Person p
+
+LEFT OUTER JOIN Actor a
+ON a.actor_id = p.id
+WHERE p.pob LIKE '%Sweden'
+	GROUP BY a.actor_id
+	ORDER BY 
+		COUNT(a.movie_id),
+		p.name ASC
+		
+		
+	 </sql><current_tab id="3"/></tab_sql></sqlb_project>

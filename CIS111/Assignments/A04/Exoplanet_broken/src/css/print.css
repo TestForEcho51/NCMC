@@ -1,0 +1,21 @@
+html{
+    background-color: #ffffff;
+    line-break: strict;
+}
+body{
+    background-color: #ffffff;
+    margin: 3cm;
+}
+body form{
+    display: none;
+}
+body button{
+    border: none;
+    text-decoration-line: none;
+}
+body a{
+    color: black;
+}
+.vocab{
+    text-decoration-line: none;
+}

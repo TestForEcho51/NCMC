@@ -1,0 +1,25 @@
+HTTPS, HTTP, HTTP/2
+
+1a) /martignon/index.html
+
+1b) HTTP/1.1
+
+1c) Persistent
+
+1d) I would think that this is important in terms of compatibility, because browsers are all different, there may be different versions of a web page that are provided depending on the browser used by the client. Also, knowing the browser may also indicate whether the client is using a mobile device or pc. 
+
+2a) HTTP/1.1 200 OK, HTTP/2.0 505 HTTP Version Not Supported
+	
+
+
+2b) It serves as a gateway between the client and the server, determine if the the connection is allowed and then either block or allow the connection, similar to a firewall. The proxy can also improve performance by caching data locally. If it is a server-side proxy, it also serves as an additional layer of security and can limit the content/requests that are allowed. 
+
+DNS
+
+1) An internet standard is a process, often times implemented by the Internet Engineering Task Force (IETF), that standardizes the way the internet works.  These standard protocols are what allow for continuity between the wide variety of devices that access the internet. Internet standards essentially bring order the Wild, Wild, West of the World Wide Web.
+
+
+
+
+
+
