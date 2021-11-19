@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Exoplanet</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <link rel="stylesheet" href="src/css/app.css" type="text/css">
     <!--
     Commenting out CSS for Re-do Using Foundation / SCSS
     <link rel="stylesheet" href="src/css/style.css" type="text/css">
@@ -21,11 +21,11 @@
 
 </head>
 
-<body class="center">
+<body class="text-center">
 <header>
 
     <div class="title">
-        <h1>EXOPLANET 2K</h1>
+        <h1  class="subheader">EXOPLANET 2K</h1>
     </div>
 
 </header>
@@ -34,7 +34,7 @@
     <span class="date">March 6, 2015</span>
     <span class="author">Dudley Storey</span>
 </div>
-<div class="content">
+<div class="content ">
 
 
     <p>Sometime this year the two thousandth planet will be discovered outside our solar system. The vast range of
@@ -53,7 +53,7 @@
     </ul>
 
 
-    <h2>Discovery Techniques</h2>
+    <h2 class="subheader">Discovery Techniques</h2>
 
 
 
@@ -62,9 +62,9 @@
         make the worlds extremely unlikely candidates as sources for life. More recent detection techniques have
         their own limitations:</p>
 
-    <img src="images/exo-full_o.webp" class="float-right" alt="Image of Exoplanet">
-
-    <h3>Radial velocity</h3>
+    <img src="images/exo-full_o1.webp" class="float-right circle-image-small image show-for-small-only border-blend" alt="Image of Exoplanet">
+    <img src="images/exo-full_o1.webp" class="float-right circle-image-large big-image show-for-medium border-blend" alt="Image of Exoplanet">
+    <h3 class="subheader">Radial velocity</h3>
 
     <p>The measurement of a planetâ€'™s orbital tug on its star, causing a rhythmic â€œwobbleâ€ in the position
         of
@@ -72,21 +72,21 @@
         are
         very large (Jupiter mass or above) and/or very close to their star.
     </p>
-    <h3>Transit</h3>
+    <h3  class="subheader">Transit</h3>
     <p>A exoplanet moving in the same plane as our line of sight will partially â€œeclipseâ€ its star during
         moments of its orbit. If this dip in perceived brightness occurs at regular intervals, an orbiting body can
         be inferred. Obviously the larger the planet and/or the further it orbits from its star, the greater the dip
         in received light and the easier the detection</p>
 </div>
 
-<h3>Reflected light</h3>
+<h3 class="subheader">Reflected light</h3>
 
 <p>A planet will reflect the light of its star in phases as it orbits, just as the moon does as it circles the
     Earth. While the amount of reflected light will be very small compared to the central star (the common
     comparison is the ability to perceive the glow of a lit match held at arms length from a lighthouse beam),
     the method is useful for large Jupiter-sized bodies orbiting relatively close to their host star.</p>
 
-<h3>Gravitational microlensing</h3>
+<h3  class="subheader">Gravitational microlensing</h3>
 
 <p>Light can be bent by its transmission medium (such as water) or by passing beside a large gravitational mass.
     The most extreme variations of the latter effect are observed around supermassive black holes and galaxies,
@@ -99,12 +99,18 @@
     own relative â€œyearâ€) before it can be confirmed. While terrestrial equipment has been used in the hunt
     for planets, the greatest gains in exoplanet detection have come from satellites, particularly the Kepler
     NASA space observatory and <button class="vocab"  onclick="showBubble('COROT')">COROT</button> (led by the French Space Agency). Other projects with greater resolution,
-    such as the Terrestrial Planet Finder and Darwin, are unfortunately on hold or cancelled at this time. The
+    such as the Terrestrial Planet Finder and Darwin, are unfortunately on hold or cancelled at this time.
+    <div class="hide float-center" id="COROT">"CoRoT (French: Convection, Rotation et Transits planétaires; English:
+    Convection, Rotation and planetary Transits) was a space telescope mission which operated from 2006 to 2013.
+    The mission's two objectives were to search for extrasolar planets with short orbital periods, particularly those of
+    large terrestrial size, and to perform asteroseismology by measuring solar-like oscillations in stars.[3]
+    The mission was led by the French Space Agency (CNES) in conjunction with the European Space Agency (ESA) and
+    other international partners."</div>
+<p>The
     <a href="https://en.wikipedia.org/wiki/James_Webb_Space_Telescope">James Webb Space Telescope</a>, a visible-wavelength-to-infrared detector, should also have the opportunity for
     imaging planets after it is launched in 2018.</p>
-<div class="bubble" id="COROT">"CoRoT (French: Convection, Rotation et Transits planétaires; English: Convection, Rotation and planetary Transits) was a space telescope mission which operated from 2006 to 2013. The mission's two objectives were to search for extrasolar planets with short orbital periods, particularly those of large terrestrial size, and to perform asteroseismology by measuring solar-like oscillations in stars.[3] The mission was led by the French Space
-    Agency (CNES) in conjunction with the European Space Agency (ESA) and other international partners."</div>
-<h2>Possible Detection of Life?</h2>
+
+<h2 class="subheader">Possible Detection of Life?</h2>
 
 <p>So far we have a dataset of just one planet confirmed to support life: we know it exists on Earth. The
     flourishing evolutionary diversity of life on Earth is entirely dependent on water, which implies that other
@@ -113,7 +119,7 @@
     liquid water are possible, from vulcanism to the gravitational tugging of a large planet on a smaller
     ice-covered worldlet, seen in Saturn's moons Enceladus and <a href="https://en.wikipedia.org/wiki/Mimas_(moon)">Mimas.</a> </p>
 <img src="images/exoplanet.webp" class="banner" alt="Image">
-<div class="bubble" id="SETI">"The search for extraterrestrial intelligence (SETI) is a collective term for
+<div class="hide" id="SETI">"The search for extraterrestrial intelligence (SETI) is a collective term for
     scientific searches for intelligent extraterrestrial life, for example, monitoring electromagnetic radiation for
     signs of transmissions from civilizations on other planets."</div>
 <p>While projects such as <button class="vocab" onclick="showBubble('SETI')">SETI</button> have so far failed to detect the presence of intelligent extraterrestrial life
@@ -145,13 +151,13 @@
 <footer>
     Images by Billie Lille, licenced under Creative Commons.
 </footer>
-<form class="form">
+<form class="small-3 columns hide-for-print">
     <p>Subscribe to our hourly newsletter</p>
     <label for="first-name"></label><input type="text" placeholder="First Name" id="first-name" class="text-in">
     <label for="last-name"></label><input type="text" placeholder="Last Name" id="last-name" class="text-in">
     <label for="email"></label><input type="text" placeholder="youremail@junkemail.com" id="email" class="text-in">
-    <button type="button" id="subscribe" onclick="showBubble('thank-you')" >Subscribe</button>
-    <div class="bubble" id="thank-you"> Thank you for subscriping!</div>
+    <a class="button medium-expanded" type="button" id="subscribe" onclick="showBubble('thank-you')" >Subscribe</a>
+    <div class="hide" id="thank-you"> Thank you for subscriping!</div>
     <p id="t-and-c">
         *By subscribing to our newsletter you agree that you have read and accept our <a href="TsAndCs.html">Terms and Conditions</a>
     </p>
@@ -162,7 +168,7 @@
     function showBubble(word){
         let definition = document.getElementById(word);
         definition.classList.toggle("bubble");
-        definition.classList.toggle("show");
+        definition.classList.toggle("hide");
     }
 
 </script>

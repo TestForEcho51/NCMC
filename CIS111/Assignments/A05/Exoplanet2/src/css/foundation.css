@@ -4932,6 +4932,7 @@ html.is-reveal-open {
     -webkit-transition: all 0s linear;
     transition: all 0s linear; }
 
+/*noinspection CssInvalidPropertyValue*/
 .slider-handle {
   position: absolute;
   top: 50%;

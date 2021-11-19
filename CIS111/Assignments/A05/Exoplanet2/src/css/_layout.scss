@@ -1,0 +1,106 @@
+$global-margin-small: .5rem auto;
+$global-margin-med: 1rem auto;
+$global-padding: 1rem;
+$global-width: 1rem;
+$bubble-border-style: dashed;
+$bubble-border-size: .18rem;
+
+
+@mixin circle-flex($size, $circle-radius){
+  height: $size;
+  width: $size;
+
+  border-radius: $circle-radius;
+
+}
+@mixin with-image($xPos, $yPos){
+  object-position: $xPos $yPos;
+  object-fit: contain;
+  padding: 40%;
+}
+@mixin center-padded{
+  text-align: center;
+  padding: $global-padding;
+}
+html {
+  margin: $global-margin-small;
+  padding: $global-padding;
+  width: 100vw;
+
+
+}
+p{
+  padding: $global-padding;
+  margin: $global-margin-small;
+  text-align: center;
+}
+body{
+
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-width: 50vw;
+  width: 100%;
+  max-width: 90vw;
+  .subheader{
+    margin: $global-margin-med;
+  }
+}
+.content{
+  max-width: 90%;
+  padding: $global-padding;
+}
+.circle-image-small{
+  @include circle-flex(30vw, 15vw);
+
+}
+.circle-image-large{
+  @include circle-flex(50vw, 25vw);
+  border-style: solid;
+  border-width: 1rem;
+}
+.title{
+  text-align: center;
+  width: 100%;
+  vertical-align: center;
+
+}
+.date-time{
+  width: 100%;
+  vertical-align: center;
+  text-align: center;
+}
+.date{
+  text-align: left;
+  float: left;
+  padding: $global-padding;
+
+}
+.author{
+  text-align: right;
+  float: right;
+  text-decoration: #ffffff;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  padding: $global-padding;
+}
+.bubble{
+  @include center-padded();
+  border: $bubble-border-size $bubble-border-style;
+  margin: $global-margin-med;
+  border-radius: 25%;
+
+}
+#thank-you{
+  border-radius: revert;
+}
+.banner{
+  max-width: 85%;
+}
+ul{
+  text-align: left;
+}
+.text-in{
+  max-width: 90%;
+  margin: $global-margin-small;
+}

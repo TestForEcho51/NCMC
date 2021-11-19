@@ -1,0 +1,36 @@
+@media only screen and (max-width: 300px) {
+
+  html{
+    padding: 0;
+  }
+  body{
+    width:100vw;
+    margin: 0;
+  }
+
+}
+@media only screen and (min-width: 40.063em) {
+
+  body{
+    max-width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  p{
+    text-align: revert;
+  }
+
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { }
+@media only screen and (min-width: 64.063em) { }
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
+@media only screen and (min-width: 90.063em) { }
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { }
+@media only screen and (min-width: 120.063em) { }
+@media print{
+  .circle-image-large{
+    display: none;
+  }
+  page-break-after: always;
+  page-break-inside: avoid;
+}

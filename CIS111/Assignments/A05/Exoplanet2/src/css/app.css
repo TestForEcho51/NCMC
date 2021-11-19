@@ -1,0 +1,150 @@
+@import url(foundation.css);
+html {
+  background-color: #000000; }
+
+body {
+  background-color: #222;
+  color: #ffffff; }
+  body .vocab {
+    color: #5c5c8c; }
+  body .bubble {
+    background-color: #777777;
+    color: #222;
+    border-color: #222; }
+
+.subheader {
+  color: #ffffff; }
+
+.border-blend {
+  border-color: #222; }
+
+.text-in {
+  background-color: #777777;
+  text-align: center; }
+
+.button {
+  background: #777777; }
+
+@font-face {
+  font-family: "Moon";
+  src: url("assets/typeface/Icomoon-Free.woff2") format("woff2"); }
+@font-face {
+  font-family: "Moon";
+  src: url("assets/typeface/Icomoon-Free.woff") format("woff"); }
+p {
+  font-family: Avenir, Verdana, sans-serif;
+  font-weight: lighter; }
+
+.subheader {
+  font-family: "Moon", Avenir, sans-serif;
+  font-weight: revert; }
+
+.title {
+  font-family: Avenir, Verdana, sans-serif;
+  font-weight: lighter; }
+
+.bubble {
+  font-size: 80%; }
+
+html {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 100vw; }
+
+p {
+  padding: 1rem;
+  margin: 0.5rem auto;
+  text-align: center; }
+
+body {
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-width: 50vw;
+  width: 100%;
+  max-width: 90vw; }
+  body .subheader {
+    margin: 1rem auto; }
+
+.content {
+  max-width: 90%;
+  padding: 1rem; }
+
+.circle-image-small {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 15vw; }
+
+.circle-image-large {
+  height: 50vw;
+  width: 50vw;
+  border-radius: 25vw;
+  border-style: solid;
+  border-width: 1rem; }
+
+.title {
+  text-align: center;
+  width: 100%;
+  vertical-align: center; }
+
+.date-time {
+  width: 100%;
+  vertical-align: center;
+  text-align: center; }
+
+.date {
+  text-align: left;
+  float: left;
+  padding: 1rem; }
+
+.author {
+  text-align: right;
+  float: right;
+  text-decoration: #ffffff;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  padding: 1rem; }
+
+.bubble {
+  text-align: center;
+  padding: 1rem;
+  border: 0.18rem dashed;
+  margin: 1rem auto;
+  border-radius: 25%; }
+
+#thank-you {
+  border-radius: revert; }
+
+.banner {
+  max-width: 85%; }
+
+ul {
+  text-align: left; }
+
+.text-in {
+  max-width: 90%;
+  margin: 0.5rem auto; }
+
+@media only screen and (max-width: 300px) {
+  html {
+    padding: 0; }
+
+  body {
+    width: 100vw;
+    margin: 0; } }
+@media only screen and (min-width: 40.063em) {
+  body {
+    max-width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw; }
+
+  p {
+    text-align: revert; } }
+@media print {
+  .circle-image-large {
+    display: none; }
+
+  page-break-after: always;
+  page-break-inside: avoid; }
+
+/*# sourceMappingURL=app.css.map */

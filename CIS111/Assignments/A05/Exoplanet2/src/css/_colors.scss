@@ -1,0 +1,37 @@
+$primary-color: #222;
+$background-color: #000000;
+$font-primary-color: #ffffff;
+$bubble-color: #777777;
+$vocab-word-color: #5c5c8c;
+html{
+  background-color: $background-color;
+}
+
+
+body{
+  background-color: $primary-color;
+  color: $font-primary-color;
+  .vocab{
+    color: $vocab-word-color;
+  }
+  .bubble{
+    background-color: $bubble-color;
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+.subheader{
+  color: $font-primary-color;
+}
+.border-blend{
+  border-color: $primary-color;
+}
+.text-in{
+  background-color: $bubble-color;
+  text-align: center;
+
+}
+.button{
+  background: $bubble-color;
+}
+
