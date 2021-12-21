@@ -1,0 +1,50 @@
+@import "_colors";
+$global-font-size: 100%;
+
+
+
+
+
+html{
+  font-size: $global-font-size;
+
+}
+body{
+  color: $font-primary-color;
+}
+p{
+  font-family: Avenir, Verdana, sans-serif;
+  font-weight: normal;
+
+
+}
+.subheader{
+  font-family: "Moon", Avenir, sans-serif;
+  font-weight: bold;
+  font-size: $global-font-size * 1;
+  color: $font-alt-color-1;
+}
+.title{
+  font-family: Avenir, Verdana, sans-serif;
+  font-weight: lighter;
+}
+.bubble{
+  font-size: $global-font-size * .8;
+}
+header{
+  a.float-center{
+    text-transform: uppercase;
+    font-size: $global-font-size *1.2;
+    color: $font-secondary-color;
+  }
+}
+section{
+  h2{
+    font-size: $global-font-size *1.4;
+    text-align: center;
+    font-weight: bolder;
+  }
+}
+.secondary{
+  color: $font-secondary-color;
+}
