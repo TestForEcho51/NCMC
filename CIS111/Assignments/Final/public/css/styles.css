@@ -165,7 +165,8 @@ html {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
-  display: block; }
+  display: block;
+  scroll-behavior: smooth; }
 
 p {
   padding: 1rem;
@@ -212,8 +213,8 @@ body {
   z-index: 1; }
 
 .logo-image-large {
-  height: 4em;
-  width: 4em;
+  height: 50%;
+  width: 50%;
   border-radius: 0.5em;
   z-index: 1; }
 
@@ -233,9 +234,9 @@ img {
   margin-top: 4em; }
 
 .section-medium {
-  height: 30em;
+  height: 35em;
   width: 100%;
-  margin-top: 6em; }
+  margin-top: 7em; }
 
 .section-large {
   height: 40em;
@@ -246,6 +247,11 @@ img {
   height: 100em;
   width: 100%;
   margin-top: 20em; }
+
+.section-xxlarge {
+  height: 120em;
+  width: 100%;
+  margin-top: 24em; }
 
 .section-top {
   margin: 0; }
@@ -351,6 +357,9 @@ header a.float-center {
     transition: height, background-color, color, .5s;
     color: #02147Cff; }
 
+#testimonials {
+  text-align: center; }
+
 .plan-card {
   width: 80%;
   margin: 10% auto;
@@ -399,7 +408,11 @@ header a.float-center {
   padding-top: 30%;
   align-content: center; }
   .inquire-form .label {
-    display: list-item; }
+    display: block;
+    width: 90vw;
+    margin: 0 auto; }
+  .inquire-form .button {
+    background-color: #02147Cff; }
 
 .about {
   display: flex;

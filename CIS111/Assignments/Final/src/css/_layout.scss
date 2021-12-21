@@ -32,6 +32,7 @@ $section-offset: $section-overlap * -.7;
   height: $height;
   width: 100%;
   margin-top: $height/5;
+
 }
 html {
 
@@ -39,6 +40,7 @@ html {
   max-width: 100%;
   min-width: 100%;
   display: block;
+  scroll-behavior: smooth;
 
 }
 p{
@@ -80,7 +82,8 @@ body{
   @include square-flex(4em, .5em);
 }
 .logo-image-large{
-  @include square-flex(4em, .5em);
+  @include square-flex(50%, .5em);
+
 }
 
 
@@ -104,13 +107,16 @@ img{
   @include section(20em);
 }
 .section-medium{
-  @include section(30em);
+  @include section(35em);
 }
 .section-large{
   @include section(40em);
 }
 .section-xlarge{
   @include section(100em);
+}
+.section-xxlarge{
+  @include section(120em);
 }
 .section-top{
   margin: 0;
@@ -123,6 +129,7 @@ img{
   position: relative;
   background-position: top;
 }
+
 .primary-3{
 
 
@@ -246,6 +253,7 @@ header{
     font-size: small;
 
   }
+
   .card:hover{
     height: 21%;
     background-color: $secondary-color;
@@ -253,6 +261,9 @@ header{
     color: $primary-color;
   }
 
+}
+#testimonials{
+  text-align: center;
 }
 .plan-card{
   width: 80%;
@@ -316,13 +327,20 @@ header{
   padding-top: 30%;
   align-content: center;
   .label{
-    display: list-item;
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+
+  }
+  .button{
+    background-color: $primary-color;
   }
 }
 .about{
 display: flex;
   padding: 15%;
 }
+
 
 
 
