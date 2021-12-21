@@ -1,20 +1,421 @@
-@media only screen and (max-width: 300px) {
+@import "colors";
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+  body{
+    margin: auto;
+    width: 60vw;
+    min-width: unset;
+  }
+  .section-top{
+    height: 10vh;
+  }
+  .section-large{
+    margin: 0 auto;
+    height: 40em;
+  }
+  .section-xxlarge{
+    height: 140em;
+  }
+  .section-small{
+    height: 10em;
 
+  }
+  #primary-4{
+    .img{
+      max-width: 80%;
+    }
+  }
+  .section-medium{
+    height: 40em;
+  }
+  .card-section{
+    height: 80%;
+    .card{
+      margin-top: 5%;
+      width: 70%;
+      margin-left: 10%;
+      margin-right: 10%;
+      color: $primary-color;
+      font-size: 1em;
+      .small-card-text{
+        font-size: x-small;
+      }
+    }
+    .testimonial{
+      color: $primary-color;
+      font-size: x-small;
 
-}
-@media only screen and (min-width: 40.063em) {
+    }
+    .button{
+      margin: 4% auto;
+    }
+    .testimonial:hover{
+      font-size: small;
+    }
+    .card{
+      display: flex;
+      .card-image{
+        width: 20%;
+        height: auto;
+        float: left;
 
-  p{
-    text-align: revert;
+      }
+      .small-card-text{
+        width: 65%;
+        padding: 4%;
+        float: right;
+        vertical-align: center;
+
+        max-height: 80%;
+        font-size: x-small;
+      }
+    }
+    .card:hover{
+      .small-card-text{
+        font-size: small;
+      }
+    }
+
+  }
+  .plan-card{
+    width: 60%;
+    height: 65vw;
+    border: $primary-color outset 1em;
+    .plan-card-mid{
+      .description{
+        font-size: medium;
+      }
+    }
+    .plan-card-bottom{
+
+    }
+  }
+  .inquire-form{
+    padding-top: 10%;
   }
 
+
+
+
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { }
-@media only screen and (min-width: 64.063em) { }
-@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
-@media only screen and (min-width: 90.063em) { }
-@media only screen and (min-width: 90.063em) and (max-width: 120em) { }
-@media only screen and (min-width: 120.063em) { }
+@media only screen and (min-width: 64.063em) and (max-width: 90.063em) {
+  html{
+    background-color: $primary-color-transparent1;
+  }
+  body{
+
+    width: 85vw;
+    min-width: unset;
+  }
+  .section-top{
+    height: 10vh;
+  }
+  .section-large{
+    margin: 0 auto;
+    height: 40em;
+  }
+  .section-xxlarge{
+    height: 140em;
+  }
+  .section-small{
+    height: 10em;
+
+  }
+  #primary-4{
+    .img{
+      max-width: 80%;
+    }
+  }
+  .section-medium{
+    height: 40em;
+  }
+  .card-section{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5vw;
+    grid-row-start: auto;
+
+    .card{
+      margin: auto;
+      border-radius: 10%;
+      display: block;
+      grid-template-rows: 25% auto;
+      vertical-align: center;
+      height: fit-content;
+      width: fit-content;
+      transition: max-height, background-color, 2s;
+      .card-image{
+        margin: auto 37.5%;
+        display: flex;
+        text-align: center;
+        width: 25%;
+        height: fit-content;
+        max-height: fit-content;
+
+      }
+
+      .small-card-text{
+        display: none;
+        width: 100%;
+        font-size: large;
+        border-radius: 20%;
+
+
+      }
+    }
+    .card:hover{
+      height: auto;
+      max-height: 90%;
+      transition: max-height, 2s;
+      .small-card-text{
+        display: flex;
+        width: 80%;
+        font-size: large;
+        background-color: $secondary-color;
+        margin: 20% 10%;
+
+        padding: 10%;
+
+      }
+    }
+
+  }
+  .plan-card{
+    width: 65%;
+    height: 65vw;
+    border: $primary-color outset 1em;
+
+    .plan-card-mid{
+      .description{
+        font-size: medium;
+      }
+    }
+    .plan-card-bottom{
+      height: 23%;
+      bottom: 0;
+
+    }
+  }
+  .inquire-form{
+    padding-top: 10%;
+  label{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  }
+
+  #Plans{
+    .plan-container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+
+
+  }
+  #plan-filler{
+    display: revert;
+
+  }
+  .primary-3 {
+
+
+    .testimonial {
+      color: $primary-color;
+      font-size: x-small;
+
+    }
+    .all-testimonial-small {
+      display: none;
+    }
+    .all-testimonial-large{
+    display: block;
+    text-align: center;
+      width: fit-content;
+  }
+  }
+
+
+
+
+
+}
+
+@media only screen and (min-width: 90.063em) and (max-width: 10000em) {
+  html{
+  background-color: $primary-color;
+
+  }
+  body{
+    min-width: 75vw;
+    width: 85vw;
+    max-width: 85vw;
+  }
+  .section-top{
+    height: 12vh;
+  }
+  .section-large{
+    margin: 5% auto;
+    padding: 0 15%;
+    height: 60em;
+  }
+  .section-xxlarge{
+    height: 60em;
+  }
+  .section-small{
+    height: 10em;
+
+  }
+  #primary-4{
+    .img{
+      max-width: 80%;
+    }
+  }
+  .section-medium{
+    height: 40em;
+  }
+  .card-section{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5vw;
+    grid-row-start: auto;
+    height: fit-content;
+
+    .card{
+      margin: auto;
+      border-radius: 10%;
+      display: block;
+      grid-template-rows: 25% auto;
+      vertical-align: center;
+      height: fit-content;
+      width: fit-content;
+      transition: max-height, background-color, 2s;
+      .card-image{
+        margin: auto 37.5%;
+        display: flex;
+        text-align: center;
+        width: 25%;
+        height: fit-content;
+        max-height: fit-content;
+
+      }
+
+      .small-card-text{
+        display: none;
+        width: 100%;
+        font-size: large;
+        border-radius: 20%;
+
+
+      }
+    }
+    .card:hover{
+      height: auto;
+      max-height: 90%;
+      transition: max-height, 2s;
+      .small-card-text{
+        display: flex;
+        width: 80%;
+        font-size: large;
+        background-color: $secondary-color;
+        margin: 20% 10%;
+
+        padding: 10%;
+
+      }
+    }
+
+  }
+  .plan-card{
+    display: inline-grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    margin: 2.5% 2.5%;
+    width: 95%;
+    height: 10%;
+    border: $primary-color outset 1em;
+    .plan-card-top{
+      height: 100%;
+      text-align: center;
+      clip-path: revert;
+    }
+
+    .plan-card-mid{
+      height: 100%;
+
+      width: 100%;
+      display: inline-grid;
+      grid-template-columns: auto auto auto auto auto auto;
+
+      .bottom-border{
+        border-right: .1em solid $secondary-color;
+
+        vertical-align: center;
+        padding: 4%;
+      }
+      .description{
+        display: inline-flex;
+        font-size: medium;
+      }
+    }
+    .plan-card-bottom{
+      height: 100%;
+      width: auto;
+      clip-path: revert;
+      display: inline;
+      .button{
+
+        z-index: 2;
+        width: fit-content;
+      }
+    }
+  }
+
+  .inquire-form{
+    padding-top: 10%;
+    max-width: 80%;
+    margin: 0 auto;
+  label{
+    max-width: 80%;
+  }
+  }
+  #Plans{
+    .plan-container{
+      display: block;
+      grid-template-columns: auto auto;
+    }
+
+
+
+
+  }
+  #plan-filler{
+    display: none;
+
+  }
+  .primary-3 {
+
+
+    .testimonial {
+      color: $primary-color;
+      font-size: x-small;
+
+    }
+    .all-testimonial-small {
+      display: none;
+    }
+    .all-testimonial-large{
+      display: block;
+      text-align: center;
+      width: fit-content;
+    }
+  }
+
+
+
+
+
+}
+
+
 @media print{
   .circle-image-large{
     display: none;
