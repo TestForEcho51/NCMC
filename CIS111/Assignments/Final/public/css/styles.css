@@ -314,20 +314,25 @@ header a.float-center {
   border-radius: 1.5rem; }
 
 .photo-group {
-  text-align: center; }
-  .photo-group img {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5%; }
+  .photo-group .thumbnail {
+    position: sticky;
     max-width: 25vw;
     height: 15vw;
     width: 25vw;
     border: solid rgba(2, 20, 124, 0.6) 0.1em;
     transition: z-index, border, height, max-width, width, 1s; }
-  .photo-group img:hover {
+  .photo-group .thumbnail:hover {
     transition: z-index, border, height, max-width, width, 1s;
-    width: 120%;
-    height: 120%;
+    position: sticky;
+    z-index: 4;
+    width: 110%;
     max-width: 35vw;
-    border: solid rgba(2, 20, 124, 0.6) 0.3em;
-    position: relative; }
+    height: auto;
+    border: solid rgba(2, 20, 124, 0.6) 0.3em; }
 
 .card-section {
   padding-top: 3.5em;
@@ -518,6 +523,16 @@ header a.float-center {
     width: 60vw;
     min-width: unset; }
 
+  .photo-group {
+    display: block; }
+
+  .thumbnail {
+    width: 25%; }
+
+  img:hover {
+    width: 35%;
+    max-width: 30vw; }
+
   .section-top {
     height: 10vh; }
 
@@ -587,6 +602,16 @@ header a.float-center {
   body {
     width: 85vw;
     min-width: unset; }
+
+  .photo-group {
+    display: block; }
+
+  .thumbnail {
+    width: 25%; }
+
+  img:hover {
+    width: 35%;
+    max-width: 30vw; }
 
   .section-top {
     height: 10vh; }
@@ -683,8 +708,26 @@ header a.float-center {
 
   body {
     min-width: 75vw;
-    width: 85vw;
+    width: 1080px;
     max-width: 85vw; }
+
+  .photo-group {
+    display: inline-grid;
+    margin: 5% auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    width: 90%; }
+
+  #Harness-Web-Traffic {
+    height: 20em; }
+
+  .thumbnail {
+    display: none; }
+
+  .thumbnail:hover {
+    width: auto;
+    height: auto;
+    max-width: 20vw; }
 
   .section-top {
     height: 12vh; }
@@ -706,14 +749,16 @@ header a.float-center {
   .section-medium {
     height: 40em; }
 
+  #Cards {
+    height: 50em; }
+
   .card-section {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 5vw;
-    grid-row-start: auto;
-    height: fit-content; }
+    grid-row-start: auto; }
     .card-section .card {
-      margin: auto;
+      margin: 20% auto;
       border-radius: 10%;
       display: block;
       grid-template-rows: 25% auto;
@@ -775,7 +820,9 @@ header a.float-center {
       display: inline; }
       .plan-card .plan-card-bottom .button {
         z-index: 2;
-        width: fit-content; }
+        width: 100%;
+        writing-mode: vertical-rl;
+        text-orientation: mixed; }
 
   .inquire-form {
     padding-top: 10%;
@@ -799,7 +846,10 @@ header a.float-center {
   .primary-3 .all-testimonial-large {
     display: block;
     text-align: center;
-    width: fit-content; } }
+    width: fit-content; }
+
+  .primary-4 {
+    height: 15em; } }
 @media print {
   .circle-image-large {
     display: none; } }

@@ -186,8 +186,11 @@ header{
 }
 .photo-group{
   text-align: center;
-  img{
-
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5%;
+  .thumbnail{
+    position: sticky;
     max-width: 25vw;
     height: 15vw;
     width: 25vw;
@@ -195,15 +198,16 @@ header{
     transition: z-index, border, height, max-width, width, 1s;
 
   }
-  img:hover{
+  .thumbnail:hover{
     transition: z-index, border, height, max-width, width, 1s;
-    width: 120%;
-    height: 120%;
+    position: sticky;
+    z-index: 4;
+    width: 110%;
     max-width: 35vw;
+    height: auto;
     border: solid $image-border-color .3em;
 
 
-    position: relative;
 
   }
 }
